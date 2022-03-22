@@ -50,12 +50,27 @@ public class Main {
 
 	}
 
+	private static void composition() {
+		Observable<Integer> o1 = Observable.just(1);
+		Observable<Integer> o2 = Observable.just(2);
+
+		Observable.zip(o1, o2, (x, y) -> "We can wait and do something with the results: " + (x + y))
+				.subscribe(System.out::println);
+
+		System.out.println("... or create another observable stream: ");
+		Observable.merge(o1, o2)
+				.subscribe(System.out::println);
+
+	}
+
 	public static void main(String[] args) {
 		thisIsTotallySynchronous();
 
 		synchronousComputations();
 
 		observableIsLazy();
+
+		composition();
 	}
 
 }

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="2-reactive-extensions" />
         <module name="1-reactive-programming-with-rxjava" />
+        <module name="3-operations-transformations" />
       </profile>
     </annotationProcessing>
   </component>

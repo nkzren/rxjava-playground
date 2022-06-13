@@ -12,6 +12,7 @@
         <module>1-reactive-programming-with-rxjava</module>
         <module>2-reactive-extensions</module>
         <module>3-operations-transformations</module>
+        <module>cap4-applying-reactive-programming-to-existing-applicaitions</module>
     </modules>
 
     <properties>

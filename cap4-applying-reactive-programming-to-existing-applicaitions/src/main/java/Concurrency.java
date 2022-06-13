@@ -13,6 +13,16 @@ public class Concurrency {
 	static ExecutorService threadPoolB = Executors.newFixedThreadPool(10, new RxThreadFactory("pool-B"));
 	static Scheduler schedulerB = Schedulers.from(threadPoolB);
 
+	/*
+		Observable s/ Scheduler -> Naturalmente sincrono e single thread
+
+		Observable c/ subscribeOn -> Pequena qtde de processamentos pesados. Sequencial, mas faz com que a
+		task seja executada em outra thread sem bloquear a main
+
+		Observable + flatMap c/ subscribeOn dentro dos items -> Sem garantia de ordem, mas processa todos os eventos
+		paralelamente
+	 */
+
 	public static void main(String[] args) throws Exception {
 		Observable.just("first", "second", "third", "fourth")
 				.doOnNext(it -> System.out.println(Thread.currentThread() + ": " + it))

@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="2-reactive-extensions" />
-        <module name="1-reactive-programming-with-rxjava" />
-        <module name="3-operations-transformations" />
+        <module name="cap3-operations-transformations" />
+        <module name="cap2-reactive-extensions" />
+        <module name="cap1-reactive-programming-with-rxjava" />
+        <module name="cap4-applying-reactive-programming-to-existing-applicaitions" />
       </profile>
     </annotationProcessing>
   </component>
